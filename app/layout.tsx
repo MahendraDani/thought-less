@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { ThemeProvider } from "@/components/theme-provider";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,11 +25,35 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <ThemeProvider
+          attribute="class"
+          forcedTheme="dark"
+          disableTransitionOnChange
+        >
+          <div className="antialiased relative min-h-screen overflow-x-hidden">
+            {/* Background Image */}
+            <div className="fixed inset-0 -z-30">
+              <Image
+                src="/ghibli.jpg"
+                alt="Background"
+                fill
+                priority
+                className="object-cover object-center"
+              />
+            </div>
+
+            {/* Dark Gradient Corners */}
+            <div className="fixed inset-0 -z-25 pointer-events-none bg-[radial-gradient(ellipse_at_top_left,_black_0%,_transparent_60%),radial-gradient(ellipse_at_top_right,_black_0%,_transparent_60%),radial-gradient(ellipse_at_bottom_left,_black_0%,_transparent_60%),radial-gradient(ellipse_at_bottom_right,_black_0%,_transparent_60%)] opacity-90" />
+
+            {/* Overlay tint */}
+            <div className="fixed inset-0 -z-20 bg-black/75" />
+
+            {/* Main content */}
+            <main className="relative z-0 p-4">{children}</main>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
