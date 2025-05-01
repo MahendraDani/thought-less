@@ -12,6 +12,13 @@ const ebGaramond = EB_Garamond({
 export const metadata: Metadata = {
   title: "Thoughtless",
   description: "Write. Don't look back. Type what's on your mind. You don't need a therapist. You need a moment of honesty.",
+  abstract : "thoughtless is a minimalist web application designed to help users clear their minds by writing their thoughts in a soothing, distraction-free environment. With a unique approach that doesn't save any input and disables backspace, it encourages raw, unfiltered expression and emotional release. Thoughts disappear the moment the tab is closed, offering a temporary, safe space for self-reflection without judgment or permanence. Ideal for late-night overthinkers, those battling anxiety, or anyone seeking a quiet moment of clarity, thoughtless is not a journaling app—it's a mental trash can. Just type, release, and walk away lighter.",
+  openGraph : {
+    title: "Thoughtless",
+    description: "Write. Don't look back. Type what's on your mind. You don't need a therapist. You need a moment of honesty.",
+    url: "https://thought-less.vercel.app",
+    siteName: "Thoughtless",
+  }
 };
 
 export default function RootLayout({

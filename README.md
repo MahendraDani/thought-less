@@ -1,1 +1,3 @@
 # Thoughtless
+
+thoughtless is a minimalist web application designed to help users clear their minds by writing their thoughts in a soothing, distraction-free environment. With a unique approach that doesn’t save any input and disables backspace, it encourages raw, unfiltered expression and emotional release. Thoughts disappear the moment the tab is closed, offering a temporary, safe space for self-reflection without judgment or permanence. Ideal for late-night over-thinkers, those battling anxiety, or anyone seeking a quiet moment of clarity, thoughtless is not a journaling app—it's a mental trash can. Just type, release, and walk away lighter.
