@@ -1,5 +1,7 @@
 # Thoughtless
 
+![Thoughtless](/public/thoughtless.png)
+
 Write. Let go.
 
 No saves. No judgment.
